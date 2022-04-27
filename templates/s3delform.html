@@ -1,0 +1,13 @@
+{% include "header.html" %}
+{% block content %}
+<div class="below-nav homeHeading">
+<h4> Welcome to s3 bucket Deletion, please provide name of bucket to be deleted </h4>
+<form method="post" action="/deletes3">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="bucketName">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% include "header.html" %}
+{% block content %}
+<div class="below-nav homeHeading">
+{% if data|length ==0%}
+<h1>Looks like you have no Buckets</h1>
+<h2><a href="/creates3">Click here<a> to create buckets</h2>
+{%else%}
+<form method="post" action="/deletes3">
+<div class="row">
+{% for item in data %}
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Name : {{item}}</h5>
+                <input type="hidden" id="custId" name="bucketToBeDeleted" value={{item}}>
+                <button type="submit" class="btn btn-primary">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</form>
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% include "header.html" %}
+{% block content %}
+<div class="below-nav homeHeading">
+<h2 class='landingHeading'> Welcome to aws services </h2>
+<div class=homeServices>
+<h4>
+    Services We Offer
+</h4>
+<div class="list-group">
+    <a href="/createec2" class="list-group-item list-group-item-action">
+      Ec2 Instance creation
+    </a>
+    <a href="listec2" class="list-group-item list-group-item-action">Ec2 Instance deletion</a>
+    <a href="listec2" class="list-group-item list-group-item-action">View Instances</a>
+    <a href="creates3" class="list-group-item list-group-item-action">Create S3 Bucket</a>
+    <a href="lists3" class="list-group-item list-group-item-action">View S3 Buckets</a>
+    <a href="deletes3" class="list-group-item list-group-item-action">Delete S3 Buckets</a>
+</div>
+</div>
+</div>
+{% endblock %}

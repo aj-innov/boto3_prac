@@ -1,0 +1,34 @@
+{% include "header.html" %}
+{% block content %}
+<div class="below-nav">
+    <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Create Instance</h5>
+              <p class="card-text">Create EC2 instance with just one click</p>
+              <a href="/createec2" class="btn btn-primary">Create</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Terminate Instance</h5>
+              <p class="card-text">Terminate your stopped EC2 instance with just one click</p>
+              <a href="/listec2" class="btn btn-primary">Terminate</a>
+            </div>
+          </div>
+        </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">View Instances</h5>
+                <p class="card-text">View all your EC2 instance with just one click</p>
+                <a href="/listec2" class="btn btn-primary">View</a>
+              </div>
+            </div>
+          </div>
+      </div>
+</div>
+{% endblock %}

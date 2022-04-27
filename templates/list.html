@@ -1,0 +1,30 @@
+{% include "header.html" %}
+{% block content %}
+<div class="below-nav homeHeading">
+{% if data|length ==0%}
+<h1>Looks like you have no instances</h1>
+<h2><a href="/createec2">Click here<a> to create instances</h2>
+{%else%}
+<form method="post" action="/terminateec2">
+<div class="row">
+{% for item in data %}
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">ID : {{item.id}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Type : {{item.instance_type}}</h6>
+            <p class="card-text">Public IP : {{item.public_ip_address}}</p>
+            <p class="card-text">State : {{item.state.Name}}</p>
+            {%if item.state.Name == 'running'%}
+                <input type="hidden" id="custId" name="idToBeStopped" value={{item.id}}>
+                <button type="submit" class="btn btn-primary">Terminate</button>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</form>
+{% endif %}
+</div>
+{% endblock %}

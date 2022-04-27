@@ -1,0 +1,13 @@
+{% include "header.html" %}
+{% block content %}
+<div class="below-nav homeHeading">
+<h4> Welcome to s3 bucket creation </h4>
+<form method="post" action="/createec2">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Key Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="keyName">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}
